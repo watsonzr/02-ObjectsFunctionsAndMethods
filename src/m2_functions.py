@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Zack Watson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -32,9 +32,11 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
     window.close_on_mouse_click()
 
@@ -104,9 +106,73 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+    """
+    Constructs a turtle SimpleTurtle.
+    Makes the turtle move turn and move backwards
+    and then construct a square.
+    """
+    zack = rg.SimpleTurtle('turtle')
+    zack.speed = 6
+    zack.pen = rg.Pen('lime green', 4)
+    zack.paint_bucket = rg.PaintBucket('salmon')
+
+    zack.left(45)
+    zack.pen_up()
+    zack.backward(400)
+    zack.right(45)
+    zack.pen_down()
+    zack.begin_fill()
+    zack.draw_square(300)
+    zack.end_fill()
+    zack.left(45)
+    zack.pen_up()
+    zack.forward(200)
+
+
+def turtle5():
+    """
+    Constructs two triangle SimpleTurtles.
+    The first turtle moves in a zig zag pattern,
+    while the second draws a triangle.
+    """
+    katie = rg.SimpleTurtle('triangle')
+    luke = rg.SimpleTurtle('triangle')
+    katie.pen = rg.Pen('hot pink', 8)
+    luke.pen = rg.Pen('orange', 15)
+    katie.speed = 5
+    luke.speed = 10
+    luke.paint_bucket = rg.PaintBucket('yellow')
+
+    katie.right(45)
+    katie.pen_up()
+    katie.backward(500)
+    katie.pen_down()
+    katie.left(45)
+    katie.forward(100)
+    katie.right(90)
+    katie.forward(100)
+    katie.left(90)
+    katie.forward(100)
+    katie.right(90)
+    katie.forward(100)
+    katie.left(90)
+    katie.forward(100)
+    katie.right(90)
+    katie.forward(100)
+    katie.left(90)
+    katie.forward(100)
+
+    luke.left(90)
+    luke.backward(300)
+    luke.begin_fill()
+    luke.draw_regular_polygon(3, 200)
+    luke.end_fill()
+
+
 ###############################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -138,7 +204,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -168,7 +234,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -184,7 +250,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 6.
+# DONE: 6.
 #   The previous two TODOs IMPLEMENTED a function (TO-DO 4)
 #   and TESTED that function (TO-DO 5).
 #
@@ -211,7 +277,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 7.
+# DONE: 7.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
