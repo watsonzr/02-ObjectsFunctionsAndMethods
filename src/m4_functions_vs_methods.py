@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Zack Watson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 # Part 1:  CONSTRUCTING objects, applying ** METHODS ** to them:
@@ -86,6 +86,10 @@ def main():
     ###########################################################################
     # When the TODOs ask you to test YOUR code, put YOUR tests below this:
     ###########################################################################
+
+    try_methods()
+    try_functions()
+    try_methods_and_functions()
 
     window.close_on_mouse_click()  # Your code must be ABOVE this statement
 
@@ -181,9 +185,17 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 3. Implement and this function, per its doc-string above.
+    # DONE: 3. Implement and this function, per its doc-string above.
     #     (To test it, put a statement in   main   that calls this function.)
     ###########################################################################
+
+    zack = rg.SimpleTurtle()
+    zack.pen = rg.Pen('brown', 5)
+
+    zack.forward(150)
+    zack.left(90)
+    zack.forward(50)
+    zack.backward(100)
 
 
 def try_functions():
@@ -195,7 +207,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #    NOTE: This function requires
@@ -204,6 +216,10 @@ def try_functions():
     #    HINT: see   jump_and_move_turtle   above.
     #
     ###########################################################################
+
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
 
 
 def try_methods_and_functions():
@@ -240,7 +256,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #   NOTE: This function should ** CALL ** the
@@ -248,6 +264,23 @@ def try_methods_and_functions():
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     #
     ###########################################################################
+
+    callan = rg.SimpleTurtle()
+    callan.pen = rg.Pen('blue', 5)
+
+    callan.backward(150)
+    callan.speed = 1
+    draw_many_squares(callan, 2, 100, 30)
+    callan.speed = 5
+    callan.pen.color = 'red'
+    draw_many_squares(callan, 10, 50, 15)
+    callan.speed = 100
+    callan.pen.thickness = 35
+    draw_many_squares(callan, 8, 300, 60)
+    callan.pen = rg.Pen('black', 3)
+    callan.backward(200)
+    callan.draw_circle(30)
+    callan.draw_square(50)
 
 
 # -----------------------------------------------------------------------------
